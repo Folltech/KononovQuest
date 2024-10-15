@@ -29,7 +29,7 @@ public class Menu {
                             description();
                             break;
                         case 4:
-                            System.exit(0);
+                            exit();
                             break;
                     }
                 }else{
@@ -66,5 +66,20 @@ public class Menu {
 
         System.out.print("\nНажмите любую клавишу чтобы продолжить");
         new Scanner(System.in).nextLine();
+    }
+    public void exit() {
+        try(FileWriter writer = new FileWriter("config.txt", false))
+        {
+            String text = "Number_of_rooms = 0\n" +
+                    "The_Monster_Dream = 0\n" +
+                    "Lives = 0";
+            writer.write(text);
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+        System.out.println("Выход из игры");
+        System.exit(0);
     }
 }

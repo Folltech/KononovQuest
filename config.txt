@@ -1,3 +1,3 @@
-Number_of_rooms = 30
-The_Monster_Dream = 34
-Lives = 3
+Number_of_rooms = 0
+The_Monster_Dream = 0
+Lives = 0
